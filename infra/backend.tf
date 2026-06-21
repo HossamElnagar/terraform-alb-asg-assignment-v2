@@ -6,8 +6,8 @@ terraform {
   backend "s3" {
     bucket         = "digilians-tfstate"
     key            = "assignment/alb-asg/terraform.tfstate"
-    region         = "us-west-1"
-    use_lockfile = true  
+    region         = "eu-west-1"
+    dynamodb_table = "digilians-tfstate-lock"
     encrypt        = true
   }
 }
