@@ -1,3 +1,7 @@
+############################################
+# Part 1: S3 Backend Configuration
+############################################
+
 terraform {
   backend "s3" {
     bucket         = "digilians-tfstate"
@@ -7,3 +11,4 @@ terraform {
     encrypt        = true
   }
 }
+
