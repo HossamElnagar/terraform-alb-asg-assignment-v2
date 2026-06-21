@@ -182,8 +182,8 @@ resource "aws_launch_template" "web" {
     http_put_response_hop_limit = 1
   }
 
-  user_data = base64encode(templatefile("${path.module}/./user_data.sh", {
-    html_content = file("${path.module}/./index.html")
+  user_data = base64encode(templatefile("${path.module}/../user_data.sh", {
+    html_content = file("${path.module}/../index.html")
   }))
 
   tag_specifications {
